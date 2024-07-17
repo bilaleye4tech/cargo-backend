@@ -38,4 +38,5 @@ Route::controller(BookingController::class)->group(function () {
     Route::post('past_bookings', 'bookRequest');
     Route::post('delete_booking', 'bookRequest');
     Route::post('view_booking', 'bookRequest');
+    Route::post('update_booking', 'bookRequest');
 });
