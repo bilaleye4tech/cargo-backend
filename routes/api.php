@@ -33,10 +33,10 @@ Route::controller(CarRequestsController::class)->group(function () {
 });
 
 Route::controller(BookingController::class)->group(function () {
-    Route::post('book', 'bookRequest');
-    Route::post('my_bookings', 'bookRequest');
-    Route::post('past_bookings', 'bookRequest');
-    Route::post('delete_booking', 'bookRequest');
-    Route::post('view_booking', 'bookRequest');
-    Route::post('update_booking', 'bookRequest');
+    Route::post('bookRide', 'bookRide');
+    Route::post('my_bookings', 'myBookings');
+    Route::post('past_bookings', 'pastBookings');
+    Route::post('delete_booking', 'deleteBooking');
+    Route::post('view_booking', 'viewBooking');
+    Route::post('update_booking', 'updateBooking');
 });

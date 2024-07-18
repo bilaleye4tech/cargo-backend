@@ -9,7 +9,7 @@ use App\Http\Requests\EditRequest;
 use App\Http\Requests\SearchRequest;
 use App\Http\Requests\ViewRequest;
 use App\Models\CarRequests;
-use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class CarRequestsController extends Controller
 {
@@ -20,7 +20,9 @@ class CarRequestsController extends Controller
 
     public function allRequests()
     {
-        $Request = CarRequests::all();
+        $today = Carbon::now()->format('d-m-Y');
+
+        $Request = CarRequests::where('start_date','>=',$today)->get();
 
         return Helpers::successResponse('All Requests', $Request);
     }

@@ -12,8 +12,8 @@ class BookingController extends Controller
     {
         $this->middleware('auth:api');
     }
-    
-    public function bookRequest(BookingRequest $request){
+
+    public function bookRide(BookingRequest $request){
 
         $booking = Booking::create([
             'user_id' => Helpers::getUser()->id,
@@ -25,4 +25,25 @@ class BookingController extends Controller
         Helpers::successResponse('Booked Successfully', $booking);
 
     }
+
+    public function myBookings(){
+
+    }
+
+    public function pastBookings(){
+
+    }
+
+    public function deleteBooking(){
+
+    }
+
+    public function viewBooking(){
+
+    }
+
+    public function updateBooking(){
+
+    }
+
 }
