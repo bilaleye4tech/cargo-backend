@@ -20,7 +20,7 @@ class CarRequestsController extends Controller
 
     public function allRequests()
     {
-        $today = Carbon::now()->format('d-m-Y');
+        $today = Carbon::now()->format('Y-m-d');
 
         $Request = CarRequests::where('start_date','>=',$today)->get();
 
