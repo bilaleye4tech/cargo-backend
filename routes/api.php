@@ -34,9 +34,9 @@ Route::controller(CarRequestsController::class)->group(function () {
 
 Route::controller(BookingController::class)->group(function () {
     Route::post('bookRide', 'bookRide');
-    Route::post('my_bookings', 'myBookings');
-    Route::post('past_bookings', 'pastBookings');
+    Route::get('my_bookings', 'myBookings');
+    Route::get('past_bookings', 'pastBookings');
     Route::post('delete_booking', 'deleteBooking');
-    Route::post('view_booking', 'viewBooking');
+    Route::get('view_booking', 'viewBooking');
     Route::post('update_booking', 'updateBooking');
 });
